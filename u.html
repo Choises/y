@@ -773,12 +773,12 @@
             
             // 🔥 ΚΛΕΙΔΙ: Το βίντεο ξεκινάει με ήχο κανονικά στο ΜΑΞ!
             videoElement.muted = false;
-            videoElement.volume = 1.0;
+            videoElement.volume = 0.5;
             document.getElementById('video-mute-icon').className = "fas fa-volume-up";
             
             // 🔥 ΚΛΕΙΔΙ: Σπρώχνουμε και την όρθια μπάρα οπτικά στο τέρμα (1.0) για να συμφωνεί!
             const videoVolBar = document.getElementById('video-volume-bar');
-            if (videoVolBar) videoVolBar.value = 1.0;
+            if (videoVolBar) videoVolBar.value = 0.5;
 
             videoElement.play().catch(e => console.log(e));
             videoElement.addEventListener('ended', returnToLiveStream, { once: true });
